@@ -1,0 +1,11 @@
+<Page ux:Class="CaseOpenPage">
+	<Router ux:Dependency="router" />
+	<JavaScript  File = "../js/caseOpenPage.js"/>
+
+	<StackPanel>
+		<Text TextAlignment="Center"  Value="This is a CaseOpenPage..."/>
+
+
+		<Button Text="Home"  Clicked = "{homeNav}"/>
+	</StackPanel>
+</Page>

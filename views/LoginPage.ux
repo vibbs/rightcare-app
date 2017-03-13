@@ -1,0 +1,31 @@
+<Page ux:Class="LoginPage">
+	<Router ux:Dependency="router" />
+
+	<Grid Rows="1*,1*">
+			<StackPanel Alignment="VerticalCenter">
+				<WhiteText Alignment="HorizontalCenter" FontSize="60">RightCare</WhiteText>
+				<WhiteText Alignment="HorizontalCenter" Opacity=".5">Health Care Service to your home</WhiteText>
+
+
+			</StackPanel>
+
+			<StackPanel Alignment="VerticalCenter" Margin="50,0,50,0">
+
+
+				<Text TextAlignment="Center" IsEnabled="{is_error}" Value="{error_message}"/>
+
+
+				<WhiteTextInput PlaceholderText="username" Value="{username}" Alignment="HorizontalCenter" />
+				<WhiteTextInput PlaceholderText="password" IsPassword="true" Value="{password}" Alignment="HorizontalCenter" />
+
+				<DropdownMenu  ux:Name="dropOne" ListItems="{options}" BackgroundColor="#bbff9e" Margin="50,10,50,20"/>
+				<Panel IsEnabled="{areCredentialsValid}">
+
+					<Button Text="LogIn"  Clicked = "{logIn}"/>
+				</Panel>
+
+				<Button Text="SignUp"  Clicked = "{registerNav}"/>
+				
+			</StackPanel>
+		</Grid>
+</Page>

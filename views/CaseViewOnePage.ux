@@ -1,0 +1,11 @@
+<Page ux:Class="CaseViewOnePage">
+
+	<Router ux:Dependency="router" />
+	<JavaScript  File = "../js/caseViewOnePage.js"/>
+
+	<StackPanel>
+
+	<Text TextAlignment="Center"  Value="This is a CaseViewOnePage..."/>
+	<Button Text="Back"  Clicked = "{backNav}"/>
+</StackPanel>
+</Page>

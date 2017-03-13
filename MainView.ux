@@ -1,0 +1,35 @@
+<App>
+	<iOS.StatusBarConfig Style="Light" />
+	<JavaScript  File = "main.js"/>
+	<Router ux:Name="router" />
+
+	<DockPanel Background="#bbff9e">
+		<Text ux:Class="WhiteText" TextColor="#285e50" />
+		<TextInput ux:Class="WhiteTextInput" PlaceholderColor="#285e5080" TextColor="#285e50" CaretColor="#285e50" />
+
+		<StatusBarBackground Dock="Top" />
+		<BottomBarBackground Dock="Bottom" />
+
+		<WhiteText Dock="Bottom" Margin="10" Opacity=".5" TextAlignment="Center" FontSize="12">by vibbsdod</WhiteText>
+
+		
+
+		<!-- <Video Layer="Background" File="assets/nature.mp4" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" ContentAlignment="Center" Opacity="0.5">
+			<Blur Radius="4.75" />
+		</Video> -->
+
+		<Navigator  DefaultPath="login">
+	        <LoginPage  ux:Template="login" router="router" />
+	        <RegisterPage  ux:Template="register" router="router" />
+
+	        <HomePage  ux:Template="home" router="router" />
+	        <CaseOpenPage ux:Template="caseOpen" router="router" />
+	        <CaseViewAllPage ux:Template="caseViewAll" router="router" />
+	        <CaseViewOnePage  ux:Template="caseViewOne" router="router" />
+	        
+    	</Navigator>
+
+		
+	</DockPanel>
+</App>
+

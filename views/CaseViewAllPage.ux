@@ -1,0 +1,10 @@
+<Page ux:Class="CaseViewAllPage">
+
+	<Router ux:Dependency="router" />
+	<JavaScript  File = "../js/caseViewAllPage.js"/>
+	<StackPanel>
+		<Text TextAlignment="Center"  Value="This is a CaseViewAllPage..."/>
+		<Button Text="Home"  Clicked = "{homeNav}"/>
+		<Button Text="Case"  Clicked = "{caseNav}"/>
+	</StackPanel>
+</Page>

@@ -1,0 +1,15 @@
+<Page ux:Class="HomePage">
+	<Router ux:Dependency="router" />
+	<JavaScript  File = "../js/homePage.js"/>
+	<StackPanel>
+		<Text TextAlignment="Center"  Value="This is a home page..."/>
+
+		<WhileTrue Value="{is_patient}">
+			<Button ux:Name="is_patient" Text="OpenCase"  Clicked = "{openCaseNav}" />
+		</WhileTrue>	
+		
+		<Button Text="ViewCases"  Clicked = "{viewCasesNav}"/>
+		<Button Text="logout"  Clicked = "{logoutNav}"/>
+		
+	</StackPanel>
+</Page>
