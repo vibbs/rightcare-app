@@ -18,7 +18,7 @@
 			<Blur Radius="4.75" />
 		</Video> -->
 
-		<Navigator  DefaultPath="login">
+		<Navigator  DefaultPath="home">
 	        <LoginPage  ux:Template="login" router="router" />
 	        <RegisterPage  ux:Template="register" router="router" />
 

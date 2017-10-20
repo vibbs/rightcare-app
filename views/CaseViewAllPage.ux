@@ -4,6 +4,20 @@
 	<JavaScript  File = "../js/caseViewAllPage.js"/>
 	<StackPanel>
 		<Text TextAlignment="Center"  Value="This is a CaseViewAllPage..."/>
+
+		
+
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Each Items="{cases}">
+					<DockPanel Margin="0,0,0,10">
+						<Text Value="{description}" TextWrapping="Wrap" Alignment="CenterLeft" Margin="10"></Text>
+					</DockPanel>	
+				</Each>	
+			</StackPanel>
+		</ScrollView>
+		
+
 		<Button Text="Home"  Clicked = "{homeNav}"/>
 		<Button Text="Case"  Clicked = "{caseNav}"/>
 	</StackPanel>

@@ -39,6 +39,10 @@ var areCredentialsValid = Observable(function() {
 
 var logIn = function(){
 	
+//temp:
+router.push('home');
+
+
 	if(username.value != "" && password.value != "" 
 		&& selected.value != null && selected.value != ""){
 		var obj = {
@@ -47,16 +51,16 @@ var logIn = function(){
 			account_type: selected.value
 		};
 
-		signIn.userLogin(obj).then(function(response){
-			console.log("main.js login response : "+JSON.stringify(response));
-			if(response.status){
-				is_logged_in.value =  true;
-				router.push('home');
-			}else{
-				is_error.value = true;
-				error_message.value = response.message;
-			}
-		});
+		// signIn.userLogin(obj).then(function(response){
+		// 	console.log("main.js login response : "+JSON.stringify(response));
+		// 	if(response.status){
+		// 		is_logged_in.value =  true;
+		// 		router.push('home');
+		// 	}else{
+		// 		is_error.value = true;
+		// 		error_message.value = response.message;
+		// 	}
+		// });
 		
 		username.value = "";
 		password.value = "";
@@ -92,9 +96,6 @@ var registerUser = function(){
 		email.value = "";
 		passwordR.value = "";
 		selected.value = "";
-
-
-
 
 	}else{
 		error_message.value = "All fields are mandatory";

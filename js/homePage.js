@@ -2,6 +2,11 @@ var Observable = require('FuseJS/Observable');
 
 var caseOpenPage = require('./caseOpenPage');
 
+var caseViewAllPage = require('./caseViewAllPage');
+
+var user = require('./userProfile');
+var userData = require('./userMetaData');
+
 var is_patient = Observable(true);
 
 
@@ -15,6 +20,8 @@ function viewCasesNav() {
 }
 
 function logoutNav() {
+
+	user.userLogout();
 	router.push('login')
 }
 
